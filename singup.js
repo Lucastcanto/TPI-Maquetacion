@@ -40,5 +40,6 @@ singupBtn.addEventListener("click", async ()=>{
     }
     else{
         console.log("usuario agregado con exito")
+        window.location.href = "/vistaPrincipal.html";
     }
 })
