@@ -10,7 +10,7 @@ body{
 justify-content: left;
 align-items: center;
 min-height: 100vh;
-background: url('backgroundImage.jpg') no-repeat;
+background: url('Images/backgroundImage.jpg') no-repeat;
 background-size:cover ;
 background-position: center;
 }
@@ -78,6 +78,21 @@ transition: .5s;
 .barraNav .btnLogin-popup:hover{
 background: #fff;
 color: #162938;
+}
+
+.barraNav .btnLogin-popup a{
+  width: 130px;
+  height: 50px;
+  background:transparent ;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: .5s;
 }
 
 .wrapper {
@@ -221,6 +236,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 30px 0 0 0;
+    cursor: pointer;
   }
   .remember label input
   {
