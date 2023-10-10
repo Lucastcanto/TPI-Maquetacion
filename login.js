@@ -31,8 +31,8 @@ async function Login (email, password){
         if(UserP === password){
             console.log("logueado")
             //agregar alert
-            sessionStorage.setItem("user",respuesta);
-            console.log(sessionStorage.getItem("user"));
+            localStorage.setItem('usuario', JSON.stringify(respuesta));
+            console.log(localStorage.getItem("user"));
             window.location.href = "/vistaPrincipal.html";
         }
         else{
