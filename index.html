@@ -20,7 +20,7 @@
     <div class="wrapper">
         <span class="icon-close"><ion-icon name="close"></ion-icon>
         </span>
-    <div class="form-box login">
+    <div id="loginForm" class="form-box login">
         <h2>Ingresar</h2>
         <form action="#">
             <div class="input-box">
@@ -36,25 +36,22 @@
                 <label ><input type="checkbox" name="" id="">Recordarme</label>
                 <a href="#">Olvide la contrasena</a>
             </div>
-            <button type="submit" class="btn">Ingresar</button>
+            <button id="loginBtn" class="btn">Ingresar</button>
             <div class="login-register">
-                <p>No tienes cuenta? <a href="/registro.html" class="register-link"></a><a href="/registro.html">Registrate</a></p>
-
+                <p>No tienes cuenta? <a href="/registro.html" id="register-link" class="register-link">Regístrate</a></p>
             </div>
+            
         </form>
     </div>
-
-
-
     </div>
-
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-<footer>
-    <p>&copy; 2023 Programmed by Juan & Lucas</p>
-</footer>
+    <footer>
+      <p>&copy; 2023 Programmed by Juan & Lucas</p>
+    </footer>
 
+    <script src="registro.js"></script>
 </body>
 
 </html>
