@@ -1,8 +1,10 @@
 const lista = document.getElementById("lista")
-// comentario para ver que onda
-async function getUsers() {
+const form = document.getElementById("loginForm")
+const loginBTN = document.getElementById("loginBtn")
 
-    const url = "https://api-tpi-production.up.railway.app/api/login/"
+async function getUser(email) {
+
+    const url = "https://api-tpi-production.up.railway.app/api/login/"+email
     const options = {
         method: "GET"
     }
@@ -11,24 +13,41 @@ async function getUsers() {
         const response = await fetch(url, options)
         const data = await response.json()
 
-        console.log(data)
-
-        console.log(data[0])
-        
-        data.forEach(user => {
-            const nombre =  user["nombre"]
-            
-            const item = document.createElement("li")
-
-            item.innerText = nombre
-
-            lista.appendChild(item)
-        });
-        
+        return data
     }
     catch(error){
         return error
     }
 }
 
-getUsers()
+async function Login (email, password){
+    const respuesta = await getUser(email)
+
+    if(respuesta["message"]){
+        console.log(respuesta["message"])
+        //agregar aviso al lado del bloque email
+    }else{
+        const UserP = respuesta["contrasenia"]
+        if(UserP === password){
+            console.log("logueado")
+            //agregar alert
+        }
+        else{
+            console.log("contraseña incorrecta")
+            //agregar aviso al lado del bloque de pass
+        }
+    }
+}
+
+
+loginBTN.addEventListener("click", async () =>{
+    const email = document.getElementById("UserEmail").value
+    const password = document.getElementById("UserPass").value
+
+    console.log("email: "+email+" pass:"+password)
+
+    await Login(email, password)
+})
+
+
+
