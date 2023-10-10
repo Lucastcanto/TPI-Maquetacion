@@ -43,7 +43,8 @@ async function Login (email, password){
 }
 
 
-loginBTN.addEventListener("click", async () =>{
+loginBTN.addEventListener("click", async (e) =>{
+    e.preventDefault(); 
     const email = document.getElementById("UserEmail").value
     const password = document.getElementById("UserPass").value
 

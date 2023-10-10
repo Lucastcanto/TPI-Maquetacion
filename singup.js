@@ -26,7 +26,8 @@ async function addUser(Unombre, Uapellido, Uemail, Upassword){
 }
 
 
-singupBtn.addEventListener("click", async ()=>{
+singupBtn.addEventListener("click", async (e)=>{
+    e.preventDefault(); 
     const Unombre = document.getElementById("UserNombre").value
     const Uapellido = document.getElementById("UserApellido").value
     const Uemail = document.getElementById("UserEmail").value
