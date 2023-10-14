@@ -22,22 +22,29 @@ async function getUser(email) {
 
 async function Login (email, password){
     const respuesta = await getUser(email)
+    const errorMessage = document.getElementById("error-message");
 
     if(respuesta["message"]){
         console.log(respuesta["message"])
-        //agregar aviso al lado del bloque email
+        errorMessage.textContent = "Correo no encontrado.";
+ 
     }else{
+        errorMessage.textContent = "";
         const UserP = respuesta["contrasenia"]
         if(UserP === password){
             console.log("logueado")
-            //agregar alert
             localStorage.setItem('usuario', JSON.stringify(respuesta));
+            swal("Usuario Logueado con Exito.",{
+                icon: "success",
+              });
             console.log(localStorage.getItem("user"));
-            window.location.href = "/vistaPrincipal.html";
+            setTimeout(function () {
+                window.location.href = "/vistaPrincipal.html";
+            }, 2000);
         }
         else{
             console.log("contraseña incorrecta")
-            //agregar aviso al lado del bloque de pass
+            errorMessage.textContent = "Contrasenia incorrecta.";
         }
     }
 }

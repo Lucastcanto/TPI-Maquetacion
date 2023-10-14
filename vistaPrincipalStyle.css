@@ -103,7 +103,7 @@ body{
   height: 4px;
   width: 100%;
   border-radius: 10px;
-  background: #0e2431;
+  background: #fff
 }
 
 .nav-container .hamburger-lines .line1 {
@@ -134,12 +134,10 @@ body{
     z-index: 1; /* Asegura que el sidebar esté en la parte superior */
   }
   
-  
-  
   .nav-container .hamburger-lines {
     position: absolute; /* Ajusta la posición del icono */
     top: 20px;
-    left: 20px;
+    left: 30px;
   }
 
 .navbar .menu-items li {
@@ -162,12 +160,12 @@ body{
 
   
   .nav-container input[type="checkbox"]:checked ~ .logo {
-    right: 5px;
+    right: 0px;
   }
 
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
-    left: 0; 
+    left: 0;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
@@ -182,6 +180,3 @@ body{
   transform: rotate(-45deg);
 }
 
-.nav-container input[type="checkbox"]:checked ~ .logo{
-  display: none;
-}

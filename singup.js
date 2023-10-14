@@ -34,12 +34,14 @@ singupBtn.addEventListener("click", async (e)=>{
     const Upassword = document.getElementById("UserPassword").value
 
     const response = await addUser(Unombre, Uapellido, Uemail, Upassword)
+    const errorMessage = document.getElementById("error-message");
     console.log(response)
     if(response["message"]){
         console.log("ingrese un email valido")
-        //error en casilla mail
+        errorMessage.textContent = "Ingrese mail valido.";
     }
     else{
+        errorMessage.textContent = "";
         console.log("usuario agregado con exito")
         localStorage.setItem('usuario', JSON.stringify(respuesta));
         window.location.href = "/vistaPrincipal.html";
