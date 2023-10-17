@@ -77,6 +77,11 @@ async function Login (email, password){
         const UserP = respuesta["contrasenia"]
         if(UserP === password){
             console.log("logueado")
+            swal("Espere un momento...", {
+                buttons: false,
+                timer: 3000,
+              });
+           
             await getPokemonList()
             localStorage.setItem('usuario', JSON.stringify(respuesta));
             swal("Usuario Logueado con Exito.",{
@@ -101,7 +106,6 @@ loginBTN.addEventListener("click", async (e) =>{
     const password = document.getElementById("UserPass").value
 
     console.log("email: "+email+" pass:"+password)
-
     await Login(email, password)
 })
 
