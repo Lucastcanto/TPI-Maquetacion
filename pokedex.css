@@ -16,6 +16,17 @@ body{
     background-position: center;
     }
     
+
+    header{     
+      padding: 20px;
+      width: 100%;
+      border-bottom: 0.1em solid #fff ;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      }
+  
     
 
 .container {
@@ -42,7 +53,8 @@ body{
   left: 0; /* Fijar en su posición, no se despliega */
   height: 100%;
   width: 250px; /* Ajusta el ancho del sidebar a tu preferencia */
-  background: rgba(0, 0, 0, 5); /* Fondo negro con transparencia (ajusta el valor al que desees) */
+  background: black; 
+  border-right: 0.1em solid #fff ;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -78,16 +90,17 @@ body{
   font-weight: 500;
 }
 
-.logo {
-  position: absolute;
-  color: #fff;
-  user-select: none;
-  top: 5px;
-  right: 15px;
-  font-size: 1.2rem;
-  -webkit-text-stroke: 0.5px #162938;
-  font-family: "Lilita One", sans-serif;
-  transition: right 0.5s ease-in-out;
+.logo
+{
+    align-items: center;
+    position: absolute;
+    color: #fff;
+    user-select: none;
+    top: 5px;
+    right: 15px;
+    font-size: 1.2rem;
+    -webkit-text-stroke: 0.5px #162938;
+    font-family: "Lilita One", sans-serif;
 }
 
 
