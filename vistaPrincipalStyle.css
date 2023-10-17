@@ -14,9 +14,7 @@ body {
   backdrop-filter: blur(0.4em);
   background-size: cover;
   background-position: center;
-  z-index: 2;
 }
-
 
 
 header{     
@@ -26,7 +24,6 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
   }
 
 
@@ -58,7 +55,6 @@ header{
   border-right: 0.1em solid #fff ;  display: flex;
   flex-direction: column;
   padding: 1rem;
-  z-index: 1; /* Asegura que el sidebar esté en la parte superior */
 }
 
 .navbar .nav-container li {
@@ -93,7 +89,7 @@ header{
 .logo
 {
     align-items: center;
-    position: absolute;
+    position: fixed;
     color: #fff;
     user-select: none;
     top: 5px;

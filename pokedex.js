@@ -44,7 +44,7 @@ async function updatePokemon(){
 
     HTMLimg.src = pokemon["img"]
     HTMLdesc.innerText = pokemon["desc"]
-    HTMLname.innerText = pokemon["name"]
+    HTMLname.innerText = pokemon["name"].toUpperCase();
 
     //clear previous types
     while(HTMLtypesList.firstChild){
@@ -69,8 +69,9 @@ window.onload = async function() {
     pokedex.forEach(pokemon => {
         console.log(pokemon)
         const item = document.createElement("button")
+        item.classList.add("pokemon-list")
         item.id = pokemon["id"]
-        item.innerText = pokemon["id"]+". "+ pokemon["name"]
+        item.innerText = pokemon["id"]+". "+ pokemon["name"].toUpperCase();
         HTMLlist.appendChild(item)
 
         item.addEventListener("click", updatePokemon)

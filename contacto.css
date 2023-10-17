@@ -93,7 +93,7 @@ body{
 .logo
 {
     align-items: center;
-    position: absolute;
+    position: fixed;
     color: #fff;
     user-select: none;
     top: 5px;

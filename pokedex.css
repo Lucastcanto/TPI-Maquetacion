@@ -6,28 +6,29 @@
   box-sizing: border-box;
 }
 
-body{
-    justify-content: left;
-    align-items: center;
-    min-height: 100vh;
-    background: url('Images/backgroundImage.jpg') no-repeat;
-    backdrop-filter: blur(0.4em);
-    background-size:cover ;
-    background-position: center;
-    }
-    
+body {
+  justify-content: left;
+  align-items: left;
+  min-height: 100vh;
+  background: url('Images/backgroundImage.jpg') no-repeat;
+  backdrop-filter: blur(0.4em);
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+}
 
-    header{     
-      padding: 20px;
-      width: 100%;
-      border-bottom: 0.1em solid #fff ;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 2;
-      }
-  
-    
+
+
+header{     
+  padding: 20px;
+  width: 100%;
+  border-bottom: 0.1em solid #fff ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  }
+
 
 .container {
   max-width: 1050px;
@@ -54,8 +55,7 @@ body{
   height: 100%;
   width: 250px; /* Ajusta el ancho del sidebar a tu preferencia */
   background: black; 
-  border-right: 0.1em solid #fff ;
-  display: flex;
+  border-right: 0.1em solid #fff ;  display: flex;
   flex-direction: column;
   padding: 1rem;
   z-index: 1; /* Asegura que el sidebar esté en la parte superior */
@@ -93,7 +93,7 @@ body{
 .logo
 {
     align-items: center;
-    position: absolute;
+    position: fixed;
     color: #fff;
     user-select: none;
     top: 5px;
@@ -103,141 +103,174 @@ body{
     font-family: "Lilita One", sans-serif;
 }
 
-
-#content-box{
-    margin:  0 auto;
-    justify-self: center;
-    height: 60vh;
-    width: 40vw;
-    display: flex;
-    background-color: aliceblue;
+#content-box {
+  margin: 2% auto;
+  width: 90%;
+  max-width: 80%;
+  flex-direction: column;
+  justify-self: center;
+  height: 80vh;
+  width: 40vw;
+  display: flex;
+  background-color: #f0f0f0; /* Cambiamos el color de fondo */
+  border-radius: 0.5rem; /* Agregamos bordes redondeados */
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* Agregamos sombra al contenedor */
+  font-family: "Lilita One", sans-serif;
 }
 
-#pokemon-info{
-    margin:  0 auto;
-    width: 20vw;
-    background-color: aqua;
-    text-align: center;
+#pokemon-info {
+  margin: 0 auto;
+  width: 20vw;
+  background-color: #e0e0e0; /* Cambiamos el color de fondo */
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
-#pokemon-img{
-    margin:  0 auto;
-    height: 10rem;
-    width: 10rem;
-    background-color: antiquewhite;
+#pokemon-img {
+  margin-top: 5%;
+  height: 10rem;
+  width: 10rem;
+  background-color: #fff; /* Cambiamos el color de fondo */
+  border-radius: 50%; /* Hacemos la imagen circular */
+  overflow: hidden; /* Ocultamos partes fuera del círculo */
 }
 
-#pokemon-list{
-    list-style-type: none;
-    display: grid;
-    background-color: green;
-    overflow-y: auto;
+#pokemon-list {
+  list-style-type: none;
+  flex: 1;
+  display: flex;
+  flex-direction: column; 
+  flex-wrap: wrap; 
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  overflow-y: auto;
+  padding: 0.7rem;
+  font-family: "Lilita One", sans-serif;
 }
 
-#types-list{
-    display: flex;
-    background-color: orange;
-    margin: 0 auto;
-    list-style-type: none;
-    align-items: center;
-    justify-content: center;
+#types-list {
+  display: flex;
+  background-color: #e0e0e0;
+  margin: 0 auto;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
-.type-box{
-    text-align: center;
-    width: 5rem;
-    padding: 0.1rem;
-    margin: 0.1rem;
-    border: 0.1rem solid whitesmoke;
-    border-radius: 0.5rem;
+.type-box {
+  text-align: center;
+  width: 5rem;
+  padding: 0.2rem;
+  margin: 0.2rem;
+  border: 0.1rem solid #fff;
+  border-radius: 0.5rem;
+  font-weight: bolder;
+  cursor: pointer; /* Agregamos un puntero al pasar el mouse */
+  transition: background-color 0.3s, color 0.3s; /* Transición de color y fondo */
 }
 
-.normal {
-    background-color: beige;
-    color: black;
+.pokemon-list{
+  text-align: center;
+  width: 9rem;
+  padding: 0.2rem;
+  margin: 0.2rem;
+  border: 0.1rem solid #fff;
+  border-radius: 0.5rem;
+  cursor: pointer; /* Agregamos un puntero al pasar el mouse */
+  transition: background-color 0.3s, color 0.3s; /* Transición de color y fondo */
 }
 
-.fire {
-    background-color: orange;
-    color: white;
+.pokemon-list:hover
+{
+  background-color: red; 
+  color: white;
 }
 
-.grass {
-    background-color: green;
-    color: white;
+.type-box.fire {
+  background-color: orange;
+  color: white;
 }
 
-.water {
-    background-color: blue;
-    color: white;
+.type-box.grass {
+  background-color: green;
+  color: white;
 }
 
-.ice {
-    background-color: lightblue;
-    color: black;
+.type-box.water {
+  background-color: blue;
+  color: white;
 }
 
-.electric {
-    background-color: gold;
-    color: black;
+.type-box.ice {
+  background-color: lightblue;
+  color: black;
 }
 
-.fighting {
-    background-color: darkred;
-    color: white;
+.type-box.electric {
+  background-color: gold;
+  color: black;
 }
 
-.flying {
-    background-color: skyblue;
-    color: black;
+.type-box.fighting {
+  background-color: darkred;
+  color: white;
 }
 
-.bug {
-    background-color: yellowgreen;
-    color: white;
+.type-box.flying {
+  background-color: skyblue;
+  color: black;
 }
 
-.ghost {
-    background-color: purple;
-    color: white;
+.type-box.bug {
+  background-color: yellowgreen;
+  color: white;
 }
 
-.rock {
-    background-color: sienna;
-    color: white;
+.type-box.ghost {
+  background-color: purple;
+  color: white;
 }
 
-.ground {
-    background-color: burlywood;
-    color: black;
+.type-box.rock {
+  background-color: sienna;
+  color: white;
 }
 
-.steel {
-    background-color: silver;
-    color: black;
+.type-box.ground {
+  background-color: burlywood;
+  color: black;
 }
 
-.dark {
-    background-color: darkgray;
-    color: white;
+.type-box.steel {
+  background-color: silver;
+  color: black;
 }
 
-.psychic {
-    background-color: palevioletred;
-    color: white;
+.type-box.dark {
+  background-color: darkgray;
+  color: white;
 }
 
-.fairy {
-    background-color: pink;
-    color: black;
+.type-box.psychic {
+  background-color: palevioletred;
+  color: white;
 }
 
-.dragon {
-    background-color: teal;
-    color: white;
+.type-box.fairy {
+  background-color: pink;
+  color: black;
 }
 
-.poison {
-    background-color: darkviolet;
-    color: white;
+.type-box.dragon {
+  background-color: teal;
+  color: white;
 }
+
+.type-box.poison {
+  background-color: darkviolet;
+  color: white;
+}
+
