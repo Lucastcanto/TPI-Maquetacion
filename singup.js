@@ -1,5 +1,49 @@
 const singupBtn = document.getElementById("registerBtn")
 
+async function getPokemon(id){
+    let url = "https://pokeapi.co/api/v2/pokemon/"+ id.toString();
+    
+    let res = await fetch(url)
+    let pokemonInfo = await res.json();
+
+    //name
+    let pokemonName = pokemonInfo["name"];
+
+    //type
+    let pokemonTypes = []
+    for (let index = 0; index < pokemonInfo["types"].length; index++) {
+        const element = pokemonInfo["types"][index];
+        pokemonTypes.push(element["type"]["name"])
+    }
+
+    //img
+    let pokemonImg = pokemonInfo["sprites"]["front_default"]; // returns URL of img
+
+    //desc
+    res = await fetch(pokemonInfo["species"]["url"]);
+    let pokemonDesc = await res.json();
+    pokemonDesc = pokemonDesc["flavor_text_entries"];
+    pokemonDesc = pokemonDesc.find(desc => desc["language"]["name"] == "es")
+    pokemonDesc = pokemonDesc["flavor_text"]
+
+    //push info in array
+    return {"id" : id ,"name" : pokemonName, "img" : pokemonImg, "type" : pokemonTypes, "desc" : pokemonDesc}
+
+}
+
+async function getPokemonList(){
+    const pokedex = []
+
+    for (let index = 1; index <= 151; index++) {
+        const pokemon = await getPokemon(index)
+        //console.log(pokemon)
+        pokedex.push(pokemon)
+    }
+
+    const data = JSON.stringify(pokedex)
+    localStorage.setItem("pokedex", data)
+}
+
 async function addUser(Unombre, Uapellido, Uemail, Upassword){
     const url = "https://api-tpi-production.up.railway.app/api/users"
     const options = {
@@ -43,7 +87,15 @@ singupBtn.addEventListener("click", async (e)=>{
     else{
         errorMessage.textContent = "";
         console.log("usuario agregado con exito")
+        await getPokemonList()
         localStorage.setItem('usuario', JSON.stringify(respuesta));
-        window.location.href = "/vistaPrincipal.html";
+        swal("Usuario Logueado con Exito.",{
+            icon: "success",
+          });
+        console.log(localStorage.getItem("user"));
+        setTimeout(function () {
+            window.location.href = "/vistaPrincipal.html";
+        }, 2000);
+
     }
 })

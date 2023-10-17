@@ -1,9 +1,10 @@
 const HTMLlist = document.getElementById("pokemon-list")
 const HTMLimg = document.getElementById("pokemon-img")
+const HTMLname = document.getElementById("pokemon-name")
 const HTMLtypesList = document.getElementById("types-list")
 const HTMLdesc = document.getElementById("pokemon-desc")
 
-const pokedex = []
+const pokedex = JSON.parse(localStorage.getItem("pokedex"))
 
 async function getPokemon(id){
     let url = "https://pokeapi.co/api/v2/pokemon/"+ id.toString();
@@ -43,6 +44,7 @@ async function updatePokemon(){
 
     HTMLimg.src = pokemon["img"]
     HTMLdesc.innerText = pokemon["desc"]
+    HTMLname.innerText = pokemon["name"]
 
     //clear previous types
     while(HTMLtypesList.firstChild){
@@ -61,11 +63,11 @@ async function updatePokemon(){
 }
 
 window.onload = async function() {
-    for (let index = 0; index < 151; index++) {
-        await getPokemon(index+1)
-    }
-
+    //for (let index = 0; index < 151; index++) {
+    //    await getPokemon(index+1)
+    //}
     pokedex.forEach(pokemon => {
+        console.log(pokemon)
         const item = document.createElement("button")
         item.id = pokemon["id"]
         item.innerText = pokemon["id"]+". "+ pokemon["name"]
