@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    justify-content: left;
+    align-items: center;
+    min-height: 100vh;
+    background: url('Images/backgroundImage.jpg') no-repeat;
+    backdrop-filter: blur(0.4em);
+    background-size:cover ;
+    background-position: center;
+    }
+    
+    
+
+.container {
+  max-width: 1050px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.navbar .menu-items {
+  position: fixed; /* Cambia a posición fija */
+  top: 0;
+  left: 0; /* Fijar en su posición, no se despliega */
+  height: 100%;
+  width: 250px; /* Ajusta el ancho del sidebar a tu preferencia */
+  background: rgba(0, 0, 0, 5); /* Fondo negro con transparencia (ajusta el valor al que desees) */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 1; /* Asegura que el sidebar esté en la parte superior */
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover {
+  font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.logo {
+  position: absolute;
+  color: #fff;
+  user-select: none;
+  top: 5px;
+  right: 15px;
+  font-size: 1.2rem;
+  -webkit-text-stroke: 0.5px #162938;
+  font-family: "Lilita One", sans-serif;
+  transition: right 0.5s ease-in-out;
+}
