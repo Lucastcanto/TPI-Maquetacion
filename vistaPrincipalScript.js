@@ -9,5 +9,3 @@ else
     console.log("usuario no llego");
 }
 
-
-

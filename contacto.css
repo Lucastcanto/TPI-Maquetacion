@@ -90,15 +90,59 @@ body{
   font-weight: 500;
 }
 
-.logo
-{
-    align-items: center;
-    position: fixed;
-    color: #fff;
-    user-select: none;
-    top: 5px;
-    right: 15px;
-    font-size: 1.2rem;
-    -webkit-text-stroke: 0.5px #162938;
-    font-family: "Lilita One", sans-serif;
+h1 {
+  color: #fff;
+  user-select: none;
+  font-size: 2rem;
+  -webkit-text-stroke: 0.5px #162938;
+  font-family: "Lilita One", sans-serif;
+  margin-top: 1%; /* Espacio desde la parte superior, ajusta según necesites */
+  margin-left: calc(250px + 60px); /* Ancho del sidebar + margen derecho */
+}
+
+.profile-menu {
+  align-items: center;
+  margin-left: auto; /* Moverá el icono a la derecha */
+  display: block;
+}
+
+
+.profile-picture img {
+  width: 30px; /* Ajusta el ancho deseado */
+  height: 30px; /* Ajusta el alto deseado */
+  border: 3px solid black;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1; /* Colocar la imagen por encima del menú */
+}
+
+
+/* Estilos para el menú desplegable */
+.menu {
+  display: none;
+  background: white; /* Fondo blanco */
+  border: 3px solid black;
+  top: 100%; /* Aparece debajo de la foto de perfil */
+  left: 0; /* Aparece a la derecha de la foto de perfil */
+  font-family: "Lilita One", sans-serif;
+  border-radius: 10%;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+/* Estilos para los enlaces del menú */
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover {
+  color: red; /* Cambia el color al pasar el cursor sobre los enlaces */
 }

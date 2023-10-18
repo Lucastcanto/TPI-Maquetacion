@@ -12,9 +12,6 @@
             <nav>
               <div class="navbar">
                 <div class="container nav-container">  
-                  <div class="logo">
-                    <h1>PokeTeam</h1>
-                  </div>
                   <div class="menu-items">
                     <li> <a href=""><strong style="color:red;">Mis Pokemon</strong></a></li>
                     <li><a href="#">PokeAmigos</a></li>
@@ -25,10 +22,26 @@
                 </div>
               </div>
             </nav>
+            <h1>PokeTeam</h1>
+            <div class="profile-menu">
+              <div class="profile-picture" onclick="toggleProfileMenu()">
+                <img src="/Images/EntrenadorPokemon1.jpg" alt="Foto de perfil">
+              </div>
+              <div class="menu" id="profileMenu">
+                <ul>
+                  <li><a href="#">Modificar perfil</a></li>
+                  <li><a href="#">Cerrar sesión</a></li>
+                </ul>
+              </div>
     </header>
-    <h3 class="usuario" id="usuario">Coleccion de: ></h3>
-    <script src="vistaPrincipalScript.js"></script>
 
+    <main>
+      <div class="sub-titulo">
+        <h3 class="usuario" id="usuario">Coleccion de:</h3>
+      </div>
+    </main>
+    <script src="vistaPrincipalScript.js"></script>
+    <script src="despliegueMenuPerfil.js"></script>
 </body>
 
 </html>
