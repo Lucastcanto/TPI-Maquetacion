@@ -20,9 +20,9 @@ header{
   padding: 20px;
   width: 100%;
   margin: auto;
-  border-bottom: 0.1em solid #fff ;
+  border-bottom: 0.1em solid #fff;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   position: fixed;
   z-index: 2;
@@ -106,17 +106,22 @@ h1 {
   font-size: 1.3rem;
   font-family: "Lilita One", sans-serif;
   margin-left: calc(250px + 60px); /* Ancho del sidebar + margen derecho */
+  position: absolute;
+  bottom: 0;
+  top: 20%;
 }
 
 
 .profile-menu {
+  position: absolute;
   align-items: center;
-  margin-left: auto; /* Moverá el icono a la derecha */
+  margin-left: 90%; /* Moverá el icono a la derecha */
   display: block;
 }
 
 
 .profile-picture img {
+  transition: left 0.5s ease-in-out;
   width: 30px; /* Ajusta el ancho deseado */
   height: 30px; /* Ajusta el alto deseado */
   border: 3px solid black;
