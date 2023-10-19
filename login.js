@@ -94,7 +94,7 @@ async function Login (email, password){
         }
         else{
             console.log("contraseña incorrecta")
-            errorMessage.textContent = "Contrasenia incorrecta.";
+            errorMessage.textContent = "Contraseña incorrecta.";
         }
     }
 }
