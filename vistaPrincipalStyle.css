@@ -113,6 +113,7 @@ h1 {
 
 
 .profile-menu {
+  margin-top:2%;
   position: absolute;
   align-items: center;
   margin-left: 90%; /* Moverá el icono a la derecha */
