@@ -9,3 +9,4 @@ else
     console.log("usuario no llego");
 }
 
+const userPerfil = document.getElementById("userPerfil");

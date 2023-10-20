@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeTeam</title>
-    <link rel="stylesheet" href="vistaPrincipalStyle.css">
+    <link rel="stylesheet" href="modificarPerfil.css">
 </head>
 <body>
     <header>
@@ -13,7 +13,7 @@
               <div class="navbar">
                 <div class="container nav-container">  
                   <div class="menu-items">
-                    <li> <a href=""><strong style="color:red;">Mis Pokemon</strong></a></li>
+                    <li> <a href=""><strong style="color:red;">Modificar Perfil.</strong></a></li>
                     <li><a href="#">PokeAmigos</a></li>
                     <li><a href="/tienda.html">Tienda</a></li>
                     <li><a href="./pokedex.html">PokeDex</a></li>
@@ -22,25 +22,36 @@
                 </div>
               </div>
             </nav>
-            <h1>PokeTeam</h1>
+            <h1>PokeTeam.</h1>
             <div class="profile-menu">
               <div class="profile-picture" onclick="toggleProfileMenu()">
                 <img src="/Images/EntrenadorPokemon1.jpg" alt="Foto de perfil">
               </div>
               <div class="menu" id="profileMenu">
                 <ul>
-                  <li><a href="/modificarPerfil.html">Modificar perfil</a></li>
+                  <li><a href="/vistaPrincipal.html">Volver a Mi Coleccion</a></li>
                   <li><a href="/"  onclick=" logOut()">Cerrar sesión</a></li>
                 </ul>
               </div>
     </header>
-
-    <main>
-      <div class="sub-titulo">
-        <h3 class="usuario" id="usuario">Coleccion de:</h3>
-      </div>
-    </main>
-    <script src="vistaPrincipalScript.js"></script>
+    <form action="#">
+    <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="form-control" placeholder="." id="nombre" name="nombre" >
+        <br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" class="form-control" placeholder="." id="apellido" name="apellido" >
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" placeholder="." id="email" name="email">
+        <br> 
+        <label for="contrasenia">Contraseña:</label>
+        <input type="password" class="form-control" placeholder="." id="contrasenia" name="contrasenia">
+        <br>
+      <button type="submit" class="btn btn-primary">Modificar</button>
+</div>
+    </form>
+    <script src="modificarPerfilScript.js"></script>
     <script src="despliegueMenuPerfil.js"></script>
 </body>
 

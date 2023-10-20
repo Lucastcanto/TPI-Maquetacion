@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  justify-content: left;
+  min-height: 100vh;
+  background: url('Images/backgroundImage.jpg') no-repeat;
+  backdrop-filter: blur(0.4em);
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+}
+
+header{     
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+  border-bottom: 0.1em solid #fff;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+  }
+
+
+.container {
+  max-width: 1050px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.navbar .menu-items {
+  position: fixed; /* Cambia a posición fija */
+  top: 0;
+  left: 0; /* Fijar en su posición, no se despliega */
+  height: 100%;
+  width: 15%; /* Ajusta el ancho del sidebar a tu preferencia */
+  background: black; 
+  border-right: 0.1em solid #fff ;  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.7rem;
+ word-wrap: break-word;
+}
+
+.navbar .nav-container a:hover {
+  font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+
+h1 {
+  color: #fff;
+  user-select: none;
+  font-size: 2rem;
+  -webkit-text-stroke: 0.5px #162938;
+  font-family: "Lilita One", sans-serif;
+  margin-top: 1%; /* Espacio desde la parte superior, ajusta según necesites */
+  margin-left: calc(15% + 60px); /* Ancho del sidebar + margen derecho */
+  z-index: 2;
+}
+
+  
+  form {
+    bottom: 0;
+    width: 80%;
+    align-items: left;
+    margin-left: calc(15% + 60px);
+    position: absolute;
+    bottom: 0;
+    top: 20%;
+    font-family: "Lilita One", sans-serif;
+}
+  
+  .form-group {
+    margin-bottom: 1rem;
+    bottom: 0;
+    font-family: "Lilita One", sans-serif;
+  }
+  
+  .form-control {
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    bottom: 0;
+    font-family: "Lilita One", sans-serif;
+  }
+  
+  .btn {
+    width: 15%;
+    height: 5%;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: "Lilita One", sans-serif;
+    transition: .5s;
+  }
+  .btn:hover{
+    background: #fff;
+    color: #162938;
+  }
+
+.profile-menu {
+  margin-top:2%;
+  position: absolute;
+  align-items: center;
+  margin-left: 90%; /* Moverá el icono a la derecha */
+  display: block;
+}
+
+
+.profile-picture img {
+  transition: left 0.5s ease-in-out;
+  width: 40px; /* Ajusta el ancho deseado */
+  height: 40px; /* Ajusta el alto deseado */
+  border: 3px solid black;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1; /* Colocar la imagen por encima del menú */
+}
+
+
+/* Estilos para el menú desplegable */
+.menu {
+  display: none;
+  background: white; /* Fondo blanco */
+  border: 3px solid black;
+  top: 100%; /* Aparece debajo de la foto de perfil */
+  left: 0; /* Aparece a la derecha de la foto de perfil */
+  font-family: "Lilita One", sans-serif;
+  border-radius: 10%;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+/* Estilos para los enlaces del menú */
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover {
+  color: red; /* Cambia el color al pasar el cursor sobre los enlaces */
+}
+

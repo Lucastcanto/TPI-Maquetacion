@@ -87,7 +87,6 @@ async function Login (email, password){
             swal("Usuario Logueado con Exito.",{
                 icon: "success",
               });
-            console.log(localStorage.getItem("user"));
             setTimeout(function () {
                 window.location.href = "/vistaPrincipal.html";
             }, 2000);
