@@ -129,6 +129,11 @@ h1 {
   border-radius: 0.5rem;
 }
 
+#pokemon-desc
+{
+  text-align: justify;
+}
+
 #pokemon-img {
   margin-top: 5%;
   height: 10rem;
