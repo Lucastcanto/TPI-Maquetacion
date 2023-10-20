@@ -123,8 +123,8 @@ h1 {
 
 .profile-picture img {
   transition: left 0.5s ease-in-out;
-  width: 30px; /* Ajusta el ancho deseado */
-  height: 30px; /* Ajusta el alto deseado */
+  width: 20%; /* Ajusta el ancho deseado */
+  height: 20%; /* Ajusta el alto deseado */
   border: 3px solid black;
   cursor: pointer;
   border-radius: 50%;

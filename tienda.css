@@ -21,7 +21,7 @@ body{
         width: 100%;
         border-bottom: 0.1em solid #fff ;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         z-index: 2;
         }
@@ -97,16 +97,20 @@ h1 {
   font-family: "Lilita One", sans-serif;
   margin-top: 1%; /* Espacio desde la parte superior, ajusta según necesites */
   margin-left: calc(250px + 60px); /* Ancho del sidebar + margen derecho */
+  z-index: 2;
 }
 
 .profile-menu {
+  margin-top:2%;
+  position: absolute;
   align-items: center;
-  margin-left: auto; /* Moverá el icono a la derecha */
+  margin-left: 90%; /* Moverá el icono a la derecha */
   display: block;
 }
 
 
 .profile-picture img {
+  transition: left 0.5s ease-in-out;
   width: 30px; /* Ajusta el ancho deseado */
   height: 30px; /* Ajusta el alto deseado */
   border: 3px solid black;
